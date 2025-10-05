@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>Employee Profile - Tata Steel</title>
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="/images/tata-steel-logo.png" alt="Tata Steel Logo">
+        </div>
+        <nav>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/logout">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Profile Section -->
+    <div class="profile-container">
+        <div class="profile-card">
+            <h2>Employee Profile</h2>
+            <div class="profile-info">
+                <% if (user) { %>
+                    <p><strong>Name:</strong>
+                        <%= user.name %>
+                    </p>
+                    <p><strong>Email:</strong>
+                        <%= user.email %>
+                    </p>
+                    <p><strong>Personal Number:</strong>
+                        <%= user.pNumber %>
+                    </p>
+                    <p><strong>Department:</strong>
+                        <%= user.department %>
+                    </p>
+                    <% } else { %>
+                        <p>
+                            <%= message %>
+                        </p>
+                        <% } %>
+            </div>
+            <button class="btn" onclick="window.location.href='/dashboard'">Back to Dashboard</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Tata Steel | Bus Tracking System | Design & Developed by Satyam Kumar
+    </footer>
+</body>
+
+</html>

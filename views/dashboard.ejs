@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>Tata Steel Bus Tracking Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="/images/tata-steel-logo.png" alt="Tata Steel Logo">
+        </div>
+        <nav>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/profile">Profile</a>
+            <a href="/logout">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Dashboard -->
+    <section class="dashboard">
+        <h1>Bus Tracking Dashboard</h1>
+        <div class="search-box">
+            <input type="text" id="busNumber" placeholder="Enter Bus Number e.g. 101">
+            <button class="btn" onclick="trackBus()">Track Bus</button>
+        </div>
+        <div class="map-container" id="map"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Tata Steel | Bus Tracking System | Design & Developed by Satyam Kumar
+    </footer>
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyButbGTWdn83DVP8nRmfY8tPOzi8yNe9Zw&callback=initMap"
+        async defer></script>
+
+    <script src="/js/script1.js"></script>
+</body>
+
+</html>
